@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <title>insertar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container mt-4"/>
+
+<a th:href="@{/new}" class="btn btn-primary">NUEVO</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>temperatura</th>
+        <th>cantidad</th>
+        <th>aseo</th>
+        <th>plagas</th>
+        <th>estado</th>
+        <th>Mant</th>
+        <th>Opciones</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr tr:each="galpon:${mGalpon}">
+        <td th:text="${galpon.id}"></td>
+        <td th:text="${galpon.temperaturaG}"></td>
+        <td th:text="${galpon.cantidaPollo}"></td>
+        <td th:text="${galpon.aseo}"></td>
+        <td th:text="${galpon.controlPlaga}"></td>
+        <td th:text="${galpon.estado}"></td>
+        <td th:text="${galpon.codMant}"></td>
+        <td>
+            <a class="btn-danger">Editar</a>
+            <a class="btn-danger">Eliminar</a>
+        </td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

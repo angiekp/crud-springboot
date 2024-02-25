@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>insertar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </head>
+    <body>
+ 
+    <div class="container mt-4"/>    
+    
+    <a th:href="@{/new}" class="btn btn-primary">NUEVO</a>
+    
+    <table class="table">
+        <thead> 
+            <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>TELEFONO</th>
+                  <th>OPCIONES</TH>
+            </tr> 
+        </thead>
+        
+        <tbody> 
+            <tr tr:each="persona:${mpersonas}"> 
+                <td th:text="${persona.id}"></td>
+                <td th:text="${persona.name}"></td>
+                <td th:text="${persona.phone}"></td>
+                <td> 
+                    <a class="btn-danger">Editar</a>
+                    <a class="btn-danger">Eliminar</a>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+        
+    </body>
+</html>
